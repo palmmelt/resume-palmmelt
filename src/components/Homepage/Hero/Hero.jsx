@@ -35,7 +35,7 @@ const Hero = () => {
           of my creations
         </h1>
         <div className="flex justify-center items-center">
-          <p className="text-[calc(120%+2vmin)] font-blod">and another is</p>
+          <p className="text-[calc(120%+2vmin)] font-blod">and another is &nbsp;</p>
           <Typed
             className="text-[calc(120%+2vmin)] font-blod "
             strings={["...", "coming.", "creating."]}
