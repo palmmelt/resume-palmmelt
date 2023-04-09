@@ -56,19 +56,18 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-
   }
   return (
     <div>
       {/* wrapper */}
-      <div className="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center bg-bg-contact">
+      <div className="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center bg-[#111111]">
         {/* social media */}
         <div
           className="w-full md:w-1/2 md:px-0 mx-5 justify-center items-center flex"
           
         >
-          <div className=" bg-orange-400 border border-orange-700 w-full lg:w-1/2 h-full p-5 pt-8">
-            <h3 className="text-2xl mb-5 pointer-events-none justify-center items-center flex border-b border-[#ff5e00]">
+          <div className=" bg-gradient-to-r rounded-xl from-orange-500 to-orange-800 border border-orange-700 w-full lg:w-1/2 h-full p-5 pt-8">
+            <h3 className="text-2xl mb-5 pb-5 pointer-events-none justify-center items-center flex border-b border-black text-white">
               CONTACT
             </h3>
             {/* list */}
@@ -77,7 +76,7 @@ const Contact = () => {
                 href="https://www.facebook.com/palmiez"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center white hover:text-white hover:bg-orange-700 p-2 "
+                className="flex items-center text-white hover:text-[#ff5e00] hover:bg-black p-2 "
               >
                 <i className="fa-brands fa-square-facebook text-xl mr-3 "></i>
                 Facebook
@@ -86,7 +85,7 @@ const Contact = () => {
                 href="https://www.instagram.com/palmmeltz/"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center white hover:text-white hover:bg-orange-700 p-2 "
+                className="flex items-center text-white hover:text-[#ff5e00] hover:bg-black p-2 "
               >
                 <i className="fa-brands fa-square-instagram text-xl mr-3 "></i>
                 Instagram
@@ -95,22 +94,22 @@ const Contact = () => {
                 href="https://twitter.com/palmmelt_dev"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center white hover:text-white hover:bg-orange-700 p-2 "
+                className="flex items-center text-white hover:text-[#ff5e00] hover:bg-black p-2 "
               >
                 <i className="fa-brands fa-square-twitter text-xl mr-2 "></i>
                 Twitter
               </a>
               <a
                 href="#coppygmail"
-                className="flex items-center  white hover:text-white hover:bg-orange-700 p-2 "
+                className="flex items-center  text-white hover:text-[#ff5e00] hover:bg-black p-2 "
                 onClick={gmailCopy}
               >
                 <i className="fa-solid fa-envelope text-xl mr-2 "></i>
-                Gmail : palmmeltwork@gmail.com
+                Gmail : Coppy
               </a>
               <a
                 href="https://github.com/palmmelt"
-                className="flex items-center  white hover:text-white hover:bg-orange-700 p-2 "
+                className="flex items-center  text-white hover:text-[#ff5e00] hover:bg-black p-2 "
                 rel="noreferrer"
                 target="_blank"
               >
@@ -124,10 +123,10 @@ const Contact = () => {
           ref={form}
           autoComplete="off"
           onSubmit={handleSubmit(sendEmail)}
-          className="w-full md:w-1/2 border border-orange-700 p-10 bg-orange-400"
+          className="w-full md:w-1/2 border border-orange-700 p-10 bg-gradient-to-r rounded-xl from-orange-500 to-orange-700"
           
         >
-          <h2 className=" uppercase text-2xl pb-3 pointer-events-none justify-center items-center flex ">
+          <h2 className=" uppercase text-2xl pb-3 pointer-events-none justify-center items-center flex text-white">
             Send message to my email.
           </h2>
           <div className="flex flex-col mb-4">
@@ -146,11 +145,11 @@ const Contact = () => {
               type="text"
               name="user_name"
               placeholder="Name"
-              className={`px-3 py-2 text-orange-600 bg-gray-800 border border-gray-900 focus:border-orange-800 focus:outline-none focus:bg-gray-300 focus:text-orange-700 `}
+              className={`px-3 py-2 text-orange-600  border border-gray-900 focus:border-orange-800 focus:outline-none focus:bg-gray-300 focus:text-orange-700 `}
               // value={userName}
               // onChange={inputeValue("userName")}
             />
-            <small className="pl-2 text-red-600">
+            <small className="pl-2 text-black">
               {errors.user_name?.message}
             </small>
             {/* <small className='pl-2'>Enter your name.</small> */}
@@ -168,9 +167,9 @@ const Contact = () => {
               type="email"
               name="user_email"
               placeholder="Email"
-              className={`px-3 py-2 text-orange-600 bg-gray-800 border border-gray-900 focus:border-orange-800 focus:outline-none focus:bg-gray-300 focus:text-orange-700 `}
+              className={`px-3 py-2 text-orange-600  border border-gray-900 focus:border-orange-800 focus:outline-none focus:bg-gray-300 focus:text-orange-700 `}
             />
-            <small className="pl-2 text-red-600">
+            <small className="pl-2 text-black">
               {errors.user_email?.message}
             </small>
           </div>
@@ -183,13 +182,13 @@ const Contact = () => {
               type="text"
               rows="4"
               placeholder="Please enter a message."
-              className="px-3 py-2 text-orange-600 bg-gray-800 border border-gray-900 focus:border-orange-800 focus:outline-none focus:bg-gray-300 focus:text-orange-700"
+              className="px-3 py-2 text-orange-600  border border-gray-900 focus:border-orange-800 focus:outline-none focus:bg-gray-300 focus:text-orange-700"
               value={contactMessage}
               maxLength="300"
               onChange={inputeValue("contactMessage")}
             />
             <div className=" relative">
-              <small className="pl-2 text-red-600">
+              <small className="pl-2 text-black">
                 {errors.message?.message}
               </small>
               <small className=" absolute right-0 top-1">
@@ -201,7 +200,7 @@ const Contact = () => {
             <button
               type="submit"
               value="Send"
-              className="w-full hover:bg-orange-600 bg-gray-800 rounded-sm font-medium my-6 mx-auto duration-300 py-2 hover:text-white text-orange-600"
+              className="w-full hover:bg-black bg-[#ffffff36] rounded-sm font-medium my-6 mx-auto duration-300 py-2 hover:text-[#ff5e00] text-white"
             >
               Submit
             </button>

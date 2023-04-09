@@ -28,7 +28,7 @@ const Me = () => {
 
         <div className="" data-aos="fade-left">
           <Titl>
-            <div className=" rounded-md border-t w-[20vh] h-[20vh] justify-center items-center flex bg-[#ff5e007a] shadow-2xl hover:shadow-[#ff5e00]">
+            <div className=" rounded-md w-[20vh] h-[20vh] justify-center items-center flex bg-[#ff5e007a] shadow-2xl hover:scale-105 duration-300 ">
             <img
               className="w-[15vh] rounded-md "
               src={process.env.PUBLIC_URL + "Untitled-1.png"}
